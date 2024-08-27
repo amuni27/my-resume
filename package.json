@@ -1,12 +1,11 @@
 {
-  "homepage": "https://amuni27.github.io/my-resume/",
   "name": "amanuel-resume",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
