@@ -6,9 +6,7 @@
 trigger:
 - main
 
-variables:
-  uisource: '.'
-  uibuild: '$(uisource)/dist'
+
 
 pool:
   vmImage: ubuntu-latest
@@ -20,15 +18,15 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    pushd $(uisource)
+    
     npm install
     npm run build
-    popd
+   
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(uibuild)'
+    rootFolderOrFile: './'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
