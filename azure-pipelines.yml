@@ -13,6 +13,7 @@ steps:
 - script: |
     npm install
     npm run build
+    ls -la
   displayName: 'Install dependencies and build Vite app'
 
 - task: ArchiveFiles@2
