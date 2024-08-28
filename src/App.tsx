@@ -1,8 +1,15 @@
+import Header from "./component/Header.tsx";
+import About from "./component/About.tsx";
+import Footer from "./component/Footer.tsx";
+
+
 function App() {
     return (
-        <>
-            <p>Hello my resume</p>
-        </>
+        <div className="bg-[#222222]">
+            <Header/>
+            <About/>
+            <Footer/>
+        </div>
     )
 }
 
